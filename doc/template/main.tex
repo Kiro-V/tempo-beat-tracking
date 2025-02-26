@@ -1,0 +1,91 @@
+%%%% File:           lmsthesis.tex
+%%%% Created:        2015-08-20
+%%%% Modified:       2015-10-05
+%%%% Author:         Dipl.-Ing. Marcus Laumer
+%%%% Description:    This LaTeX template is supposed to be used for writing a thesis at the chair of
+%%%%                 Multimedia Communications and Signal Processing (LMS) at the Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU)
+
+\documentclass[
+paper=A4,               % paper format
+pagesize=auto,          % provide page size for compiler
+fontsize=12pt,          % font size
+DIV=16,                 % type area calculation
+twoside=false,           % two-sided layout for printing
+BCOR=20mm,              % binding correction for printing (ask at copy shop!)
+parskip=false,          % space between paragraphs
+chapterprefix=true,     % prefix before chapter names: Chapter #
+appendixprefix=true,    % prefix before appendix names: Appendix #
+listof=totoc,           % include lists of figures and tables in TOC
+bibliography=totoc,     % include bibliography in TOC
+headinclude=true,       % header included in type area
+footinclude=false,      % footer included in type area
+headsepline=false,       % separation line between header and text
+footsepline=false,      % separation line between footer and text
+headings=small,         % size of headings
+numbers=noenddot        % no dot after chapter heading prefixes
+] {scrbook}
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%\usepackage[ngerman]{babel} % can be used for writing the thesis in German
+\usepackage[onehalfspacing]{setspace}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage[caption=false]{subfig}
+\usepackage{booktabs}
+\usepackage[printonlyused]{acronym}
+
+\setcounter{chapter}{1}
+\counterwithout{figure}{chapter}
+\counterwithout{equation}{chapter}
+\counterwithout{align}{chapter}
+\counterwithout{table}{chapter}
+
+\graphicspath{{figures/}}
+
+\begin{document}
+\begin{center}
+    \Huge{\textbf{Project title}} \\
+    \vspace{10pt}
+    \large{DSP Lab Course WS 2019/20} \\
+    \vspace{5pt}
+    \large{\textbf{Authors: \\} 
+    Name1 (email1), Name2 (email2)}\\
+    \large{\textbf{Supervisor:} your project's supervisor}
+
+    
+\end{center}
+
+
+
+
+
+\section*{Introduction}
+This template is intended as a rough guideline for the structure of your report. Feel free to use a different structure, LaTeX instead of LibreOffice, etc. The length should be 2-3 pages. 
+
+\section*{Algorithm}
+Description of the algorithm you implemented with references \cite{lin1973} You can insert formulas \eqref{eq:equation1}.
+\begin{equation}
+    x = \frac{a}{b}
+    \label{eq:equation1}
+\end{equation}
+
+
+\section*{Implementation}
+How did you implement it? What problems did you encounter? How did you solve them?
+\section*{Evaluation Results}
+Describe the setup of you evaluation (data, conditions, parameters). Show interesting plots of your results (see Figure~\ref{fig:figure1}). Instead of just creating a huge number of plots or numbers, it's better to show only a few plots with a good explanation of what is happening.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{LMS_logo_150x90.png}
+\caption{Caption for this figure.}
+\label{fig:figure1}
+\end{figure}
+   
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}
