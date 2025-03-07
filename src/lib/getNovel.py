@@ -49,7 +49,7 @@ def __get_local_avg(x, M=10):
         local_avg[i] = np.mean(x[start:end])
     return local_avg
 
-def getNovel(signal, fs,window_size=4096, hop_length=2048, gamma=1, M=0, norm=False):
+def getNovel(signal, fs,window_size=2048, hop_length=512, gamma=1, M=0, norm=False):
     """
     Compute the novelty function of an audio signal (Spectrum-based).
     Parameters
