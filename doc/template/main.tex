@@ -121,7 +121,7 @@ PLP estimation is used to dynamically track the predominant beat position over t
 \begin{equation}
 \Gamma(t) = \big|\sum_{i=1}^{N} \kappa_n\bigl(m\bigr)\big|_{\ge 0}
 \end{equation}
-where \(f_i\) and \(\phi_i\) are the frequency and phase of each kernel at time \(t\). The accumulated kernels form the PLP curve, which provides a robust representation of the beat throughout the track \cite{muller2015beat}.
+where $\kappa_n(m)$ is the sinusoidal kernel at time frame $n$. The accumulated kernels form the PLP curve, which provides a robust representation of the beat throughout the track \cite{muller2015beat}.
 \section*{Methodology and Result}
 The system was implemented in Python using the \textbf{Librosa} library for audio processing and analysis. The system consists of the following steps:
 \begin{enumerate}
