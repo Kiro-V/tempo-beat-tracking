@@ -73,7 +73,7 @@ def getTempogram(x, Fs,  win_length = 2048, hop_size = 512, Theta = np.arange(50
             if norm:
                 r_xx = r_xx / lag_sum
             X[:, m] = r_xx
-        T_coef = np.arange(X.shape[1]) * Fs
+        T_coef = np.arange(0, M) * hop_size / Fs
         F_coef_lag = np.arange(0, win_length) / Fs
         # Extract the part within the tempo range
         X_cut = X[lag_min:lag_max+1, :]

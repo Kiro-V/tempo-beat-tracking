@@ -139,7 +139,7 @@ Figure \ref{fig:novelty} shows the novelty curve of the audio.
     \caption{Novelty curve of the audio track}
     \label{fig:novelty}
 \end{figure}
-The tempogram representation using Fourier-based method and autocorrelation of the track are shown in Figure \ref{fig:tempogram} respectively, with detected tempos annotated.
+The tempogram representation using Fourier-based method and autocorrelation of the track are shown in Figure \ref{fig:tempogram}, with detected tempos annotated.
 \begin{figure}[ht]
     \centering
     \subfloat[Autocorrelation]{\includegraphics[width=0.5\textwidth]{tempoA_3.png}}
@@ -147,7 +147,7 @@ The tempogram representation using Fourier-based method and autocorrelation of t
     \caption{Tempogram representation of the audio track}
     \label{fig:tempogram}
 \end{figure}
-Table \ref{tab:results} shows the tempo estimation results using both methods, along with the global tempo estimation and PLP curve.
+Table \ref{tab:results} shows the global tempo estimation results using both methods, along with the chosen tempo range. Finally, Figure \ref{fig:plp} illustrate the resulting PLP estimation curve on autocorrelation and Fourier tempogram.
 \begin{table}
     \centering
     \begin{tabular}{l|c|c}
@@ -186,7 +186,9 @@ Several challenges were encountered during the implementation:
     \item \textbf{Adaptive Tempo Tracking}: Introducing more advanced models, such as \textbf{dynamic time warping (DTW)}, would help improve accuracy in tracking tempo changes over time.
     \item \textbf{Noise Reduction in PLP Estimation}: Smoothing the PLP curve using more sophisticated filters, or employing \textbf{machine learning} to model the predominant pulse, could enhance accuracy in challenging tracks.
 \end{enumerate}
-   
+\section*{Conclusion}
+The project successfully implemented a system for beat tracking and tempo estimation in music signals. Despite several limitations regarding tempo variations, the system managed to accurately estimate the beat and tempo for various music genres, especially during stable tempo sections. Future work could focus on enhancing the system's robustness to tempo variations and improving the accuracy of PLP estimation in expressive music.
+
 \bibliographystyle{IEEEtran}
 \bibliography{references}
 
